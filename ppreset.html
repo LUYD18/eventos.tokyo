@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com 30 Imagens Clicáveis</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #dd0000;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 50px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 20px;
+        }
+        .image-grid img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        .image-grid img:hover {
+            transform: scale(1.1);
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff0000;
+        }
+        .red-border img {
+            border: 3px solid #ff0000;
+        }
+        .blue-border img {
+            border: 3px solid #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>FEMENINA</h1>
+        <div class="image-grid red-border">
+            <img src="dsa.png" alt="Imagem 1" onclick="copyText('jaqueta 246 0; calca 95 0; blusa 15 0; sapatos 100 0; oculos -1 -1; acessorios 0 0; chapeu -1 -1; colete 0 0; mascara 123 0; maos 3 0;')">
+            <img src="1.png" alt="Imagem 2" onclick="copyText('jaqueta 278 16; calca 109 16; blusa 15 0; sapatos 87 16; oculos -1 -1; acessorio 0 0; chapeu 129 16; colete 0 0; mascara 0 0; maos 165 16;')">
+            <img src="d.png" alt="Imagem 3" onclick="copyText('jaqueta 713 0; calca -1 0; blusa -1 0; sapatos 2 1; oculos -1 -1; acessorios -1 0; chapeu -1 -1; colete -1 0; mascara -1 0; maos -1 0;')">
+            <img src="image4.jpg" alt="Imagem 4" onclick="copyText('Texto 4 copiado!')">
+            <img src="image5.jpg" alt="Imagem 5" onclick="copyText('Texto 5 copiado!')">
+            <img src="image6.jpg" alt="Imagem 6" onclick="copyText('Texto 6 copiado!')">
+            <img src="image7.jpg" alt="Imagem 7" onclick="copyText('Texto 7 copiado!')">
+            <img src="image8.jpg" alt="Imagem 8" onclick="copyText('Texto 8 copiado!')">
+            <img src="image9.jpg" alt="Imagem 9" onclick="copyText('Texto 9 copiado!')">
+            <img src="image10.jpg" alt="Imagem 10" onclick="copyText('Texto 10 copiado!')">
+            <img src="image11.jpg" alt="Imagem 11" onclick="copyText('Texto 11 copiado!')">
+            <img src="image12.jpg" alt="Imagem 12" onclick="copyText('Texto 12 copiado!')">
+            <img src="image13.jpg" alt="Imagem 13" onclick="copyText('Texto 13 copiado!')">
+            <img src="image14.jpg" alt="Imagem 14" onclick="copyText('Texto 14 copiado!')">
+            <img src="image15.jpg" alt="Imagem 15" onclick="copyText('Texto 15 copiado!')">
+        </div>
+        
+        <br><br><br>
+
+        <h1>MASCULINA</h1>
+
+        <br><br><br>
+
+        <div class="image-grid blue-border">
+            <img src="m-a.jpg" alt="Imagem 16" onclick="copyText('jaqueta 778 5; calca -1 0; blusa 15 0; sapatos 15 4; oculos -1 -1; acessorios -1 0; chapeu -1 -1; colete 0 0; mascara -1 0; maos 15 0;')">
+            <img src="image17.jpg" alt="Imagem 17" onclick="copyText('Texto 17 copiado!')">
+            <img src="image18.jpg" alt="Imagem 18" onclick="copyText('Texto 18 copiado!')">
+            <img src="image19.jpg" alt="Imagem 19" onclick="copyText('Texto 19 copiado!')">
+            <img src="image20.jpg" alt="Imagem 20" onclick="copyText('Texto 20 copiado!')">
+            <img src="image21.jpg" alt="Imagem 21" onclick="copyText('Texto 21 copiado!')">
+            <img src="image22.jpg" alt="Imagem 22" onclick="copyText('Texto 22 copiado!')">
+            <img src="image23.jpg" alt="Imagem 23" onclick="copyText('Texto 23 copiado!')">
+            <img src="image24.jpg" alt="Imagem 24" onclick="copyText('Texto 24 copiado!')">
+            <img src="image25.jpg" alt="Imagem 25" onclick="copyText('Texto 25 copiado!')">
+            <img src="image26.jpg" alt="Imagem 26" onclick="copyText('Texto 26 copiado!')">
+            <img src="image27.jpg" alt="Imagem 27" onclick="copyText('Texto 27 copiado!')">
+            <img src="image28.jpg" alt="Imagem 28" onclick="copyText('Texto 28 copiado!')">
+            <img src="image29.jpg" alt="Imagem 29" onclick="copyText('Texto 29 copiado!')">
+            <img src="image30.jpg" alt="Imagem 30" onclick="copyText('Texto 30 copiado!')">
+        </div>
+    </div>
+
+    <script>
+        function copyText(message) {
+            navigator.clipboard.writeText(message).then(() => {
+                document.querySelector('.message').innerText = message;
+            }).catch(err => {
+                console.error('Erro ao copiar o texto: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
